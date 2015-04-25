@@ -93,3 +93,15 @@ I have included some styling to make the calendar display look a little
 nicer.  Feel free to modify the styling as desired: the stylesheets are
 located in the app/assets/stylesheets directory under the appropriate
 file names.
+
+We will need to go back into the index action in the CalendarController
+and add some code to display the month and year properly:
+
+```
+def index
+  @events = Event.all
+  @date = params[:month] ? Date.parse(params[:month]) : Date.today
+end
+```
+
+That is it for this phase!
