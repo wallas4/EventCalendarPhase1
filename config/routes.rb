@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'home_page/index'
+
+  resources :events
+
+  resources :users
+
+
+root 'home_page#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

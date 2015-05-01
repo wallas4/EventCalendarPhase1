@@ -1,0 +1,17 @@
+<h1>HomePage#index</h1>
+<p>Find me in app/views/home_page/index.html.erb</p>
+
+
+<div id="calendar">
+  <h2 id="month">
+      <%= link_to "<", root_path(month: (@date.prev_month).strftime("%Y-%m-%d")) %>
+    <%= @date.strftime("%b %Y") %>
+    <%= link_to ">", root_path(month: (@date.next_month).strftime("%Y-%m-%d")) %>
+  </h2>
+  <%= calendar_for @events, year: @date.year, month: @date.month do |c| %>
+    <%= c.head('Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat') %>
+    <%= c.day do |day, events| %>
+      <%= day.day %>
+    <% end %>
+  <% end %>
+</div>

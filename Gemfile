@@ -29,6 +29,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+#Adding in Guymon's thing
+gem "watu_table_builder", :require => "table_builder"
+
+
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
